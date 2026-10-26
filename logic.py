@@ -2,6 +2,7 @@ import os
 import shutil
 from datetime import datetime
 
+
 class Calculator:
     def calculate_sum(self, number_str):
 
@@ -12,11 +13,8 @@ class Calculator:
 
         decimal_part = number_str.split(".")[1]
 
-        return sum(
-            int(digit)
-            for digit in decimal_part
-            if digit.isdigit()
-        )
+        return sum(int(digit) for digit in decimal_part if digit.isdigit())
+
 
 class LogManager:
     LOG_FILE = "logs/calculations.log"
